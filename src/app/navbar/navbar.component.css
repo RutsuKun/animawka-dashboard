@@ -1,0 +1,10 @@
+.navbar {
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    left: 0;
+}
+.navbar a {
+    color:white;
+    text-decoration: none;
+}
