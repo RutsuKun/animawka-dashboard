@@ -1,19 +1,22 @@
-.login {
+.register {
     widows: 100%;
     height: 100%;
     background: #F2994A;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
      
-    padding-top:150px;
+    padding-top:100px;
     box-sizing: border-box;
 }
-.login-card {
+.register-card {
     width:400px;
     margin:0 auto;
 }
-.login-card mat-form-field {
+.register-card mat-form-field {
     width:100%;
+}
+.success {
+    background-color: green;
 }
 .error {
     background-color: red;

@@ -6,19 +6,20 @@
     </mat-card-header>
     <mat-card-content>
         <div class="example-container">
+          <mat-card *ngIf="error==true" class="error">Incorrect data!</mat-card>
           <p>
             <mat-form-field appearance="outline">
               <mat-label>Email adress</mat-label>
-              <input matInput placeholder="Email adress">
+              <input [(ngModel)]="email" name="email" matInput placeholder="Email adress">
             </mat-form-field>
           </p>
           <p>
             <mat-form-field appearance="outline">
               <mat-label>Password</mat-label>
-              <input matInput placeholder="Password"  type="password">
+              <input [(ngModel)]="password" matInput placeholder="Password"  type="password">
             </mat-form-field>
           </p>
-          <p><button mat-stroked-button>Login</button></p>
+          <p><button (click)="login()" mat-stroked-button>Login</button></p>
           </div>
     </mat-card-content>
   </mat-card>

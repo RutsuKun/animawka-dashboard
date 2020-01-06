@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<div class="register">
+<mat-card class="register-card">
+    <mat-card-header>
+      <mat-card-title>Rejestracja</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="example-container" *ngIf="registered==false">
+            <mat-card *ngIf="error==true" class="error">Incorrect data!</mat-card>
+            <p>
+                <mat-form-field appearance="outline">
+                  <mat-label>Username</mat-label>
+                  <input [(ngModel)]="username" name="username" matInput placeholder="Username">
+                </mat-form-field>
+              </p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email adress</mat-label>
+                    <input [(ngModel)]="email" name="email" matInput placeholder="Email adress">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input [(ngModel)]="password" matInput placeholder="Password"  type="password">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Repeat password</mat-label>
+                    <input [(ngModel)]="password2" matInput placeholder="Repeat password"  type="password">
+                </mat-form-field>
+            </p>
+            <p><button (click)="register()" mat-stroked-button>Register</button></p>
+        </div>
+        <mat-card *ngIf="registered==true" class="success">Register complete! Login now</mat-card>
+    </mat-card-content>
+  </mat-card>
+</div>
